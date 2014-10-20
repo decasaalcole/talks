@@ -1,0 +1,5 @@
+.slides section img.noframe {
+	border: 0px solid black;
+	background: none;
+	box-shadow: none;
+}

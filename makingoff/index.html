@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>De Casa al Cole</title>
+
+  <meta name="description" content="Herramienta para ordenar coles">
+  <meta name="author" content="Jorge Sanz">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="../reveal/css/reveal.min.css">
+  <link rel="stylesheet" href="../reveal/css/theme/serif.css" id="theme">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+  if (window.location.search.match(/print-pdf/gi)) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = '../reveal/css/print/pdf.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+  </script>
+
+  <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <div>
+            <img src="/images/logo100.png" style="height:300px;" class="noframe">
+        </div>
+        <div>
+          <h1>Making off</h1>
+        </div>
+        <div>
+            <p>
+              Jorge Sanz · <a href="http://twitter.com/xurxosanz">@xurxosanz</a>
+            </p>
+        </div>
+      </section>
+
+      <!-- Primera parte Motivación -->
+      <section>
+        <section>
+          <h1>I</h1>
+          <h2>Motivación</h2>
+        </section>
+        <section>
+          <h2>problema:</h2>
+          <h3>¿qué colegios están
+            <strong>cerca</strong> de mi casa?</h3>
+        </section>
+        <section>
+          <h2>¿<strong>quién</strong> tiene este problema?</h2>
+        </section>
+        <section>
+          <h2>Profesores y profesionales de la educación en concurso de traslado y padres</h2>
+        </section>
+        <section>
+          <h2>¿cómo ordenarías los colegios en
+            función del tiempo de viaje hasta tu casa?</h2>
+        </section>
+        <section>
+          <h2>¿calcular uno a uno
+              todos los trayectos?</h2>
+        </section>
+        <section>
+            <div>
+              <img src="/images/facepalm.jpg">
+            </div>
+        </section>
+        <section>
+            <div>
+              <img src="/images/logo100.png" class="noframe" style="width:20%;">
+            </div>
+            <blockquote>
+              <h2>
+                <strong>acortamos</strong> el camino hacia la
+                <strong>decisión</strong> inteligente</h2>
+            </blockquote>
+        </section>
+        <section>
+            <h2><strong>¿cómo?</strong><br/>
+              sistema de
+              <strong>ordenación</strong> de colegios en función del
+              <strong>tiempo</strong> de viaje</h2>
+        </section>
+      </section>
+
+      <!-- Segunda parte los datos -->
+      <section>
+        <section>
+          <h1>II</h1>
+          <h2>Los datos</h2>
+        </section>
+        <section>
+          <h2>Colegios</h2>
+        </section>
+        <section>
+          <h2>Códigos postales</h2>
+        </section>
+        <section>
+          <h2>Preparación de datos de OSM</h2>
+        </section>
+        <section>
+          <h2>Cálculo masivo de tiempos de viaje usando OSRM</h2>
+        </section>
+        <section>
+          <h2>Carga en CartoDB</h2>
+        </section>
+      </section>
+
+      <!-- Tercera parte: los servicios -->
+      <section>
+        <section>
+          <h1>III</h1>
+          <h2>Servicios: CartoDB</h2>
+        </section>
+        <section>
+          <h2>Mapas dinámicos</h2>
+        </section>
+        <section>
+          <h2>API de consulta</h2>
+        </section>
+      </section>
+
+
+      <!-- Cuarta parte: las aplicaciones -->
+      <section>
+        <section>
+          <h1>IV</h1>
+          <h2>Desarrollo de los clientes</h2>
+        </section>
+        <section>
+          <h2>Cliente web</h2>
+        </section>
+        <section>
+          <h2>Cliente móvil</h2>
+        </section>
+      </section>
+
+      <!-- Cierre -->
+      <section>
+        <div>
+          <img src="/images/logo100.png" style="height:300px;" class="noframe">
+        </div>
+        <div>
+          <h1>¿Preguntas?</h1>
+        </div>
+        <div>
+            <p>
+              Jorge Sanz · <a href="http://twitter.com/xurxosanz">@xurxosanz</a>
+            </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../reveal/lib/js/head.min.js"></script>
+  <script src="../reveal/js/reveal.min.js"></script>
+
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    transition: 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+    // Parallax scrolling
+    // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+    // parallaxBackgroundSize: '2100px 900px',
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [{
+      src: '../reveal/lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      }
+    }, {
+      src: '../reveal/plugin/markdown/marked.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: '../reveal/plugin/markdown/markdown.js',
+      condition: function() {
+        return !!document.querySelector('[data-markdown]');
+      }
+    }, {
+      src: '../reveal/plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    }, {
+      src: '../reveal/plugin/zoom-js/zoom.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }, {
+      src: '../reveal/plugin/notes/notes.js',
+      async: true,
+      condition: function() {
+        return !!document.body.classList;
+      }
+    }]
+  });
+  </script>
+
+</body>
+
+</html>
