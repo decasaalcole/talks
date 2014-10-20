@@ -1,5 +1,25 @@
-.slides section img.noframe {
+.reveal img.noframe {
 	border: 0px solid black;
 	background: none;
 	box-shadow: none;
+}
+
+.reveal strong{
+	color: #a40000;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+	line-height: 0.95em;
+}
+.reveal tt{
+	font-family: DejaVu Sans Mono, Courier, monospace;
+	font-size: smaller;
+}
+.reveal .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+.cartodbmini{
+	background: url('../images/cartodb-mini.png') no-repeat center center;
 }
