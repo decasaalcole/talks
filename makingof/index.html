@@ -45,7 +45,7 @@
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-      <section>
+      <section class="frontpage">
         <div>
             <img src="../images/logo100.png" style="height:300px;" class="noframe">
         </div>
@@ -80,7 +80,7 @@
         </section>
 
         <section>
-          <h2>¿cómo ordenarías los colegios en
+          <h2>¿cómo ordenarías <strong>todos</strong> los colegios de la CV (&#8776;3.000) en
             función del <strong>tiempo de viaje</strong> hasta tu casa?</h2>
         </section>
         <section>
@@ -103,9 +103,29 @@
         </section>
         <section>
             <h2><strong>¿cómo?</strong><br/>
-              sistema de
+              desarrollando un sistema de
               <em>ordenación</em> de colegios en función del
               <em>tiempo</em> de viaje</h2>
+        </section>
+        <section style="font-size:3em;color:rgb(51,61,61);">
+          <span class="fragment fade-in" data-fragment-index="1">
+            <span class="fragment highlight-red" data-fragment-index="1">
+              <i class="fa fa-database fa-lg"></i><br/>
+            </span>
+          </span>
+          <span class="fragment fade-in" data-fragment-index="2">
+            <span class="fragment highlight-red" data-fragment-index="2">
+              <i class="fa fa-cloud"></i> =
+              <i class="fa fa-map-marker"></i> +
+              <i class="fa fa-cogs"></i> <br/>
+            </span>
+          </span>
+          <span class="fragment fade-in" data-fragment-index="3">
+            <span class="fragment highlight-red" data-fragment-index="3">
+            <i class="fa fa-globe"></i> =
+            <i class="fa fa-desktop"></i> +
+            <i class="fa fa-mobile"></i>
+          </span>
         </section>
       </section>
 
@@ -114,6 +134,7 @@
         <section>
           <h1><i class="fa fa-database fa-lg"></i></h1>
           <h2>Los datos</h2>
+          <h3>Colegios + Códigos Postales</h3>
         </section>
         <section>
           <h2>Colegios</h2>
@@ -144,7 +165,6 @@
         <section>
           <h2>Códigos postales</h2>
           <ul>
-            <li></li>
             <li>Punteado <strong>a mano</strong> el centro urbano<br/>
               de cada código postal</li>
             <li><strong>SHP</strong>
@@ -157,10 +177,12 @@
             <li>¡OpenStreetMap es una <strong>base de datos</strong>!</li>
             <li>Descarga del <strong>PBF</strong> de España
               de <a href="http://download.geofabrik.de/europe/spain.html">Geofabrik</a> </li>
-            <li>Con <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a>
+            <li>Con <a href="https://wiki.openstreetmap.org/wiki/Osmosis">Osmosis</a> se recorta y aligera
               <ul>
-                <li>Extración por coordenadas con <tt>--bounding-box</tt> (<a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">doc</a>)</li>
-                <li>Exracción de las vías con <tt>--tag-filter</tt> (<a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">doc</a> ) </li>
+                <li>Extración por coordenadas<br/>
+                  con <tt>--bounding-box</tt> (<a href="https://wiki.openstreetmap.org/wiki/Osmosis#Extracting_bounding_boxes">doc</a>)</li>
+                <li>Exracción de las vías<br/>
+                  con <tt>--tag-filter</tt> (<a href="https://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage#--tag-filter_.28--tf.29">doc</a> ) </li>
               </ul>
             </li>
           </ul>
@@ -171,7 +193,9 @@
           <h2>Cálculo masivo <br/> de tiempos de viaje</h2>
         </section>
         <section>
-          <h2>¿Qué es OSRM?</h2>
+          <h2>¿Qué es <a href="https://github.com/Project-OSRM/osrm-backend/wiki">
+            OSRM</a>?
+          </h2>
           <ul>
             <li>Dos proyectos: <strong>servidor</strong> y cliente</li>
             <li>Servidor de cálculos de rutas altamente <strong>eficiente</strong></li>
@@ -214,23 +238,156 @@
             </li>
           </ul>
         </section>
+        <section>
+          <img src="../images/dcac-times.png" alt="Tiempos" class="noframe">
+        </section>
+        <section>
+          <h2>¿Por qué esta estructura?</h2>
+          <ul>
+            <li>Es más <strong>compacta</strong>, ahorra filas</li>
+            <li>Pero <strong>complica</strong> las consultas</li>
+            <li class="fragment fade-in">Peeeeeero cabe en una<br/> cuenta
+              <strong>gratuita</strong> de CartoDB &#128519;</li>
+          </ul>
+        </section>
       </section>
 
       <!-- Tercera parte: los servicios -->
       <section>
         <section>
-          <img src="../images/cartodb.png" alt="CartoDB" class="noframe">
+          <img class="noframe" src="../images/cartodb.png" alt="CartoDB" class="noframe">
+        </section>
+        <section>
+          <div>
+            <img class="noframe" src="../images/dcac-datasets.png" alt="Datasets de DCAC">
+          </div>
+          <p><a href="https://decasaalcole.cartodb.com/datasets">Datasets en CartoDB</a></p>
+        </section>
+        <section>
+          <div>
+            <img class="noframe" src="../images/dcac-coles-table.png" alt="Tabla de coles">
+          </div>
+          <p>Tabla de colegios</p>
+        </section>
+        <section>
+          <div>
+            <img class="noframe" src="../images/dcac-coles-map.png" alt="Mapa de coles">
+          </div>
+          <p>Mapa de colegios</p>
+        </section>
+        <section>
+          <blockquote style="font-size:2em;line-height:1em;">
+            <strong>Objetivo</strong>:<br/>
+            Dado un código postal, <strong>cruzar</strong> la tabla de colegios
+            con la de tiempos para <strong>asignar</strong> a cada uno el
+            tiempo de viaje
+          </blockquote>
+        </section>
+        <section>
+          <pre style="font-size:.8em;line-height:1em;">
+Dado
+  "ftimes" como los tiempos y distancias
+  de 46960 a todos los demás
+
+Y
+  "ttimes" como los tiempos y distancias
+  de todos a 46960
+
+Montamos "totaltimes" como
+  ttimes + ftimes + (46960 al
+  que les damos tiempo y distancia = 0)
+
+Y así ya podemos:
+  Cruzar coles con totaltimes
+  por el campo cp
+
+Y ordenamos el resultado por
+  tiempos y distancias
+          </pre>
+        </section>
+        <section>
+          <img
+            src="../images/dcac-sqlcoles.png"
+            alt="SQL que ordena los coles" style="width:70%;">
         </section>
         <section>
           <h1><i class="fa fa-map-marker"></i></h1>
           <h2>Mapas dinámicos</h2>
         </section>
         <section>
+          <div>
+            <img src="../images/dcac-cartocss.png"
+              alt="CartoCSS de DCAC" class="noframe">
+          </div>
+          <p>CartoCSS para generar mapa temático por distancias
+            (<a href="http://cdb.io/1qpqIih">demo</a>)</p>
+        </section>
+        <section>
+          <h2>CartoDB genera mapas dinámicos</h2>
+          <ul>
+            <li class="fragment fade-in">Podemos generar
+              <strong>visualizaciones</strong> estáticas</li>
+            <li class="fragment fade-in">Pero también las
+              podemos generar <strong>&laquo;al vuelo&raquo;</strong></li>
+            <li class="fragment fade-in">Establecer una
+              <strong>consulta SQL</strong></li>
+            <li class="fragment fade-in">Establecer un
+              <strong>estilo CartoCSS</strong></li>
+          </ul>
+        </section>
+        <section>
+          <img src="../images/mind-blown.gif"
+            alt="Mind Blown!" style="width:450px;">
+        </section>
+        <section>
           <h1><i class="fa fa-cogs"></i></h1>
           <h2>API de consulta</h2>
         </section>
+        <section>
+          <h2>¿Qué es una API?</h2>
+          <ul>
+            <li>Formato (y protocolo) para <br/>
+              <strong>comunicarnos</strong> con un sistema</li>
+            <li>WMS, WFS+GML, CSW, ...</li>
+            <li class="fragment fade-in">
+              CartoDB expone una API <strong>SQL</strong> <br/>
+                que genera <strong>JSON</strong>, CSV, Shapfiles,...</li>
+          </ul>
+        </section>
+        <section>
+          <img class="noframe" src="../images/what.jpg" alt="What?">
+        </section>
+        <section>
+          <h2>¿SQL?</h2>
+        </section>
+        <section>
+          <a class="noicon" href="http://decasaalcole.cartodb.com/api/v2/sql?q=select%20count(*)%20cuentas%20from%20times;">
+            http://decasaalcole.cartodb.com/api/v2/<br/>
+            sql?q=<strong>select count(*) cuentas from times</strong>
+          </a>
+          <img src="../images/dcac-sql.png" alt="SQL">
+        </section>
+        <section>
+          <a class="noicon" href="http://decasaalcole.cartodb.com/api/v2/sql?q=select%20*%20from%20times%20limit%203&format=csv">
+            http://decasaalcole.cartodb.com/api/v2/<br/>
+            sql?q=select * from times limit 3&amp;<strong>format=csv</strong></a>
+          <img src="../images/dcac-sql-3.png" alt="SQL en CSV">
+        </section>
+        <section>
+          <h2>¡Y por supuesto SQL espacial!</h2>
+          <a class="noicon" href="http://decasaalcole.cartodb.com/api/v2/sql?q=select%20ST_AsText(ST_Buffer(the_geom%2C1))%20from%20cp%20limit%201">
+            http://decasaalcole.cartodb.com/api/v2/<br/>
+            sql?q=select <strong>st_astext(st_buffer(the_geom,1))</strong>
+            from cp limit 1</a>
+        </section>
+        <section>
+          <img src="../images/mind-blown-keanu.gif"
+            style="width:550px;" alt="Mind Blown #2">
+          <p class="fragment fade-in">Efectivamente, podeis ejecutar<br/>
+            SQL espacial con <strong>cualquier</strong><br/>
+            tabla que alguien publique en CartoDB</p>
+        </section>
       </section>
-
 
       <!-- Cuarta parte: las aplicaciones -->
       <section>
@@ -249,7 +406,7 @@
       </section>
 
       <!-- Cierre -->
-      <section>
+      <section class="frontpage">
         <div>
           <img src="../images/equipo-300.jpg" style="height:300px;" class="noframe">
         </div>

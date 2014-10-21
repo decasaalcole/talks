@@ -20,6 +20,20 @@
   font-style: normal;
 }
 
-.cartodbmini{
-	background: url('../images/cartodb-mini.png') no-repeat center center;
+.reveal img{
+	max-width: 80%;
+}
+
+
+.reveal .slides section .fragment.highlight-red.visible{
+	color: #383d3d;
+}
+.reveal .slides section .fragment.highlight-red.current-fragment {
+	color: #a40000;
+}
+
+.reveal section:not(.frontpage) a:not(.image):not(.noicon):after{
+	content: "❋";
+	vertical-align: super;
+	font-size: 0.4em;
 }
