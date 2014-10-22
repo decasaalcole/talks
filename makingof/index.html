@@ -17,8 +17,8 @@
 
   <link rel="stylesheet" href="../reveal/css/reveal.min.css">
   <link rel="stylesheet" href="../reveal/css/theme/serif.css" id="theme">
+  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- For syntax highlighting -->
   <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
@@ -45,47 +45,57 @@
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-      <section class="frontpage">
-        <div>
-            <img src="../images/logo100.png" style="height:300px;" class="noframe">
-        </div>
-        <div>
-          <h1>Making of</h1>
-        </div>
-        <div>
-            <p>
-              Jorge Sanz · <a href="http://twitter.com/xurxosanz">@xurxosanz</a><br>
-              <a href="http://decasaalcole.github.io/talks/makingof">decasaalcole.github.io/talks/makingof</a>
-            </p>
+      <section class="frontpage" data-background="../images/making-of.jpg">
+        <div class="frame">
+          <div>
+              <img style="background-color:white;padding:25px;height:200px;"
+              src="../images/logo100.png" class="noframe">
+          </div>
+          <div>
+            <h1>Making of</h1>
+          </div>
+          <div>
+              <p>
+                <a href="http://jorgesanz.net">Jorge Sanz</a> · <a href="http://twitter.com/xurxosanz">@xurxosanz</a><br>
+                <a href="http://decasaalcole.github.io/talks/makingof">decasaalcole.github.io/talks/makingof</a>
+              </p>
+          </div>
         </div>
       </section>
 
       <!-- Primera parte Motivación -->
       <section>
-        <section>
+        <section data-background="#B8CCE1">
           <h1><i class="fa fa-plug fa-lg"></i></h1>
           <h2>Motivación</h2>
         </section>
         <section>
-          <h2><strong>problema</strong>:</h2>
-          <h3>¿qué colegios están
+          <h2><strong>Problema</strong></h2>
+        </section>
+        <section><img src="../images/donkey.jpg" class="noframe" alt="Donkey"></section>
+        <section>
+          <h2><strong>Pregunta</strong></h2>
+          <h3 class="fragment fade-in">¿qué colegios están
             <strong>cerca</strong> de mi casa?</h3>
         </section>
         <section>
-          <h2>¿<strong>quién</strong> tiene este problema?</h2>
+          <h2>¿<strong>Quién</strong> se plantea esta pregunta?</h2>
         </section>
         <section>
           <h2><strong>Profesionales</strong> de la educación en
-            concurso de traslado y <strong>padres</strong></h2>
+            concurso de traslado y <strong>padres</strong>
+            que se mudan, primer año de escuela, etc</h2>
         </section>
 
         <section>
-          <h2>¿cómo ordenarías <strong>todos</strong> los colegios de la CV (&#8776;3.000) en
+          <h2>¿Cómo ordenarías <strong>todos</strong> los colegios de la CV (&#8776;3.500) en
             función del <strong>tiempo de viaje</strong> hasta tu casa?</h2>
         </section>
         <section>
-          <h2>¿calcular <strong>uno a uno</strong>
-              todos los trayectos?</h2>
+          <h2>¿Calcular <span  class="fragment highlight-red"
+            data-fragment-index="1">uno a uno</span><br/>
+            <span class="fragment highlight-red"
+            data-fragment-index="1">todos</span> los trayectos?</h2>
         </section>
         <section>
             <div>
@@ -97,15 +107,27 @@
               <img src="../images/logo100.png" class="noframe" style="width:20%;">
             </div>
             <blockquote>
-              <h2>&laquo;<strong>acortamos</strong> el camino hacia la
+              <h2>&laquo;<strong>Acortamos</strong> el camino hacia la
                 <strong>decisión</strong> inteligente&raquo;</h2>
             </blockquote>
         </section>
         <section>
-            <h2><strong>¿cómo?</strong><br/>
-              desarrollando un sistema de
-              <em>ordenación</em> de colegios en función del
-              <em>tiempo</em> de viaje</h2>
+          <h2><strong>¿Quiénes?</strong></h2>
+          <div>
+            <img src="../images/equipo-300.jpg" style="height:300px;" class="noframe">
+          </div>
+          <p>Vicente Sanjaime, Jorge Sanz, Pedro-Juan Ferrer,<br/> Daniel Gastón, Alicia Rodrigo y Rafael Oliete </p>
+        </section>
+        <section>
+          <h2><strong>¿Cuándo?</strong></h2>
+          <p><img src="../images/summerhackvlc.jpg" alt="SummerHackVLC" style="height:400px;"></p>
+          <p><a href="http://www.meetup.com/Hackathon-Lovers/events/196595462/">1er SummerHack VLC</a> · 6/9/14</p>
+        </section>
+        <section>
+          <h2><strong>¿Cómo?</strong><br/>
+                desarrollando un sistema de
+                <em>ordenación</em> de colegios en función del
+                <em>tiempo</em> de viaje</h2>
         </section>
         <section style="font-size:3em;color:rgb(51,61,61);">
           <span class="fragment fade-in" data-fragment-index="1">
@@ -131,10 +153,10 @@
 
       <!-- Segunda parte los datos -->
       <section>
-        <section>
+        <section data-background="#B8CCE1">
           <h1><i class="fa fa-database fa-lg"></i></h1>
           <h2>Los datos</h2>
-          <h3>Colegios + Códigos Postales</h3>
+          <h3>Colegios + Códigos Postales<br/> + Tiempos de viaje</h3>
         </section>
         <section>
           <h2>Colegios</h2>
@@ -155,12 +177,15 @@
         <section>
           <h2>Colegios</h2>
           <ul>
-            <li>A nivel nacional el
-              <a href="https://www.educacion.gob.es/centros/home.do">MinEd</a>
-              publica en HTML <i class="fa fa-frown-o fa-lg"></i></li>
-            <li class="fragment fade-in">Estamos trabajando en ello...</li>
-            <li class="fragment fade-in">Pero ese tema para otro día</li>
+            <li>En el ámbito nacional el
+              <a href="https://www.educacion.gob.es/centros/home.do">Ministerio de Educación</a>
+              <br/>publica en HTML <i class="fa fa-frown-o fa-lg"></i></li>
+            <li class="fragment fade-in" data-fragment-index="1">Estamos trabajando en ello&#133;</li>
+            <li class="fragment fade-in" data-fragment-index="2">Pero ese tema para otro día
+            <span class="fragment fade-in" data-fragment-index="3">&#128520;</span></li>
           </ul>
+          <p class="fragment fade-in" data-fragment-index="3">
+            <img src="../images/coles-spain.png" alt="Coles Spain"></p>
         </section>
         <section>
           <h2>Códigos postales</h2>
@@ -254,6 +279,10 @@
 
       <!-- Tercera parte: los servicios -->
       <section>
+        <section data-background="#B8CCE1">
+          <h1><i class="fa fa-cloud"></i></h1>
+          <h2>Los servicios</h2>
+        </section>
         <section>
           <img class="noframe" src="../images/cartodb.png" alt="CartoDB" class="noframe">
         </section>
@@ -283,8 +312,8 @@
             tiempo de viaje
           </blockquote>
         </section>
-        <section>
-          <pre style="font-size:.8em;line-height:1em;">
+        <section data-background="../images/hacker.jpg">
+            <pre style="font-size:.8em;line-height:1em;padding:20px;background-color:rgba(255,255,255,0.9);">
 Dado
   "ftimes" como los tiempos y distancias
   de 46960 a todos los demás
@@ -303,9 +332,9 @@ Y así ya podemos:
 
 Y ordenamos el resultado por
   tiempos y distancias
-          </pre>
+            </pre>
         </section>
-        <section>
+        <section data-background="../images/hacker.jpg">
           <img
             src="../images/dcac-sqlcoles.png"
             alt="SQL que ordena los coles" style="width:70%;">
@@ -323,21 +352,19 @@ Y ordenamos el resultado por
             (<a href="http://cdb.io/1qpqIih">demo</a>)</p>
         </section>
         <section>
-          <h2>CartoDB genera mapas dinámicos</h2>
+          <h2>CartoDB como <br/>servicio de mapas</h2>
           <ul>
             <li class="fragment fade-in">Podemos generar
               <strong>visualizaciones</strong> estáticas</li>
             <li class="fragment fade-in">Pero también las
               podemos generar <strong>&laquo;al vuelo&raquo;</strong></li>
-            <li class="fragment fade-in">Establecer una
+            <li class="fragment fade-in">1: Establecer una
               <strong>consulta SQL</strong></li>
-            <li class="fragment fade-in">Establecer un
+            <li class="fragment fade-in">2: Establecer un
               <strong>estilo CartoCSS</strong></li>
           </ul>
         </section>
-        <section>
-          <img src="../images/mind-blown.gif"
-            alt="Mind Blown!" style="width:450px;">
+        <section data-background="../images/mind-blown.gif">
         </section>
         <section>
           <h1><i class="fa fa-cogs"></i></h1>
@@ -380,44 +407,143 @@ Y ordenamos el resultado por
             sql?q=select <strong>st_astext(st_buffer(the_geom,1))</strong>
             from cp limit 1</a>
         </section>
-        <section>
-          <img src="../images/mind-blown-keanu.gif"
-            style="width:550px;" alt="Mind Blown #2">
-          <p class="fragment fade-in">Efectivamente, podeis ejecutar<br/>
-            SQL espacial con <strong>cualquier</strong><br/>
-            tabla que alguien publique en CartoDB</p>
+        <section data-background="../images/mind-blown-keanu.gif">
+          <div class="frame fragment fade-in" data-fragment-index="1">
+            <h2><strong>WHAT?</strong></h2>
+            <p>Efectivamente, podeis ejecutar<br/>
+              SQL espacial con <strong>cualquier</strong><br/>
+              tabla que alguien publique en CartoDB</p>
+          </div>
         </section>
       </section>
 
       <!-- Cuarta parte: las aplicaciones -->
       <section>
-        <section>
+        <section data-background="#B8CCE1">
           <h1><i class="fa fa-globe"></i></h1>
           <h2>Desarrollo de los clientes</h2>
+        </section>
+        <section>
+          <blockquote style="font-size:1.7em;line-height:1em;">Los clientes básicamente son interfaces para <strong>ejecutar la SQL</strong> y presentarla de una forma <strong>amigable</strong> para el usuario, ofreciendo adicionalmente filtros para <strong>afinar la búsqueda</strong>.</blockquote>
         </section>
         <section>
           <h1><i class="fa fa-desktop"></i></h1>
           <h2>Cliente web</h2>
         </section>
         <section>
+          <img class="noframe" src="../images/dcac-1.png" alt="Portada y filtros">
+          <p>Portada y filtros</p>
+        </section>
+        <section>
+          <img class="noframe" src="../images/dcac-2.png" alt="Listado de centros">
+          <p>Listado de centros</p>
+        </section>
+        <section>
+          <img class="noframe" src="../images/dcac-3.png" alt="Mapa temático de centros">
+          <p>Mapa temático de centros</p>
+        </section>
+        <section>
+          <img class="noframe" src="../images/dcac-4.png" alt="Página de la GVA del centro">
+          <p>Página de la GVA del centro</p>
+        </section>
+        <section>
+          <img class="noframe" src="../images/dcac-5.png" alt="Página con el equipo">
+          <p>El equipo</p>
+        </section>
+        <section  data-background="../images/tools.jpg">
+          <div class="frame">
+            <h2><strong>Detalles</strong></h2>
+            <ul>
+              <li>Código en <a href="https://github.com/decasaalcole/decasaalcole-web">github</a></li>
+              <li>Aplicación HTML5/CSS3/JavaScript</li>
+              <li><a href="requirejs.org">Require.js</a> +
+              <a href="http://jquery.com/">JQuery</a> +
+              <a href="http://getbootstrap.com/">Bootstrap</a></li>
+              <li>Mapas con <a href="http://leafletjs.com/">Leaflet</a> +
+              <a href="http://docs.cartodb.com/cartodb-platform/cartodb-js.html">CartoDB.js</a></li>
+              <li>Construcción con <a href="http://gruntjs.com/">Grunt</a> y
+                <a href="http://bower.io/">Bower</a></li>
+            </ul>
+          </div>
+        </section>
+        <section>
           <h1><i class="fa fa-mobile"></i></h1>
           <h2>Cliente móvil</h2>
+        </section>
+        <section>
+          <img src="../images/mdcac-1.png" alt="Página de entrada" class="noframe">
+          <p>Página de entrada</p>
+        </section>
+        <section>
+          <img src="../images/mdcac-2.png" alt="Listado de centros" class="noframe">
+          <p>Listado de centros</p>
+        </section>
+        <section>
+          <img src="../images/mdcac-3.png" alt="Información ampliada" class="noframe">
+          <p>Información ampliada</p>
+        </section>
+        <section>
+          <a href="../images/mdcac.mp4"><img src="../images/mdcac-4.png" alt="Demo" class="noframe"></a>
+          <p><a href="https://www.youtube.com/watch?v=WhKt348h1Mw">
+            https://www.youtube.com/watch?v=WhKt348h1Mw</a></p>
+        </section>
+
+        <section  data-background="../images/tools.jpg">
+          <div class="frame">
+            <h2><strong>Detalles</strong></h2>
+            <ul>
+              <li>iOS y Android</li>
+              <li>Desarrollo HTML/CSS/JavaScript</li>
+              <li>Apache <a href="https://cordova.apache.org/">
+                Cordova</a></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Resultados</h2>
+          <ul>
+            <li class="fragment fade-in">Trabajo de difusión
+            en<br/> <strong>redes sociales</strong> y <strong>contacto directo</strong></li>
+            <li class="fragment fade-in">Buena acogida en <strong>foros</strong> de profesores</li>
+            <li class="fragment fade-in">Unas <strong>3.500</strong> visitas</li>
+            <li class="fragment fade-in">Superado límite gratuito para <strong>Mapbox</strong></li>
+            <li class="fragment fade-in">Hay que <strong>esperar</strong> al próximo concurso</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Conclusiones</h2>
+          <ul>
+            <li>Gracias al <em>OpenData</em> podemos pasar<br/>
+              de la <strong>idea</strong> a la <strong>acción</strong></li>
+            <li class="fragment fade-in">OSRM es un producto <strong>muy</strong>
+              potente y versátil</li>
+            <li class="fragment fade-in">CartoDB es una <strong>plataforma</strong> para
+              publicar y <br/>analizar datos geográficos muy interesante</li>
+            <li class="fragment fade-in">Se puede desarrollar un <strong>producto completo</strong>
+              <br/>con una <strong>inversión inicial</strong> casi nula</li>
+          </ul>
         </section>
       </section>
 
       <!-- Cierre -->
-      <section class="frontpage">
-        <div>
-          <img src="../images/equipo-300.jpg" style="height:300px;" class="noframe">
-        </div>
-        <div>
-          <h1>¿Preguntas?</h1>
-        </div>
-        <div>
-            <p>
-              Jorge Sanz · <a href="http://twitter.com/xurxosanz">@xurxosanz</a><br>
-              <a href="http://decasaalcole.github.io/talks/makingof">decasaalcole.github.io/talks/makingof</a>
-            </p>
+      <section class="frontpage" data-background="../images/making-of.jpg">
+        <div class="frame">
+          <div>
+            <h1>¿Preguntas?</h1>
+          </div>
+          <div>
+              <p>
+                <a href="http://jorgesanz.net">Jorge Sanz</a> · <a href="http://twitter.com/xurxosanz">@xurxosanz</a><br>
+                <a href="http://decasaalcole.github.io/talks/makingof">decasaalcole.github.io/talks/makingof</a>
+              </p>
+          </div>
+          <div>
+            <img src="../images/geoinquietos-vlc.png" style="height:150px;" class="noframe">
+          </div>
+          <div><a href="http://valencia.geoinquietos.org">http://valencia.geoinquietos.org</a></div>
         </div>
       </section>
     </div>
@@ -435,7 +561,7 @@ Y ordenamos el resultado por
     // Display a presentation progress bar
     progress: true,
     // Display the page number of the current slide
-    slideNumber: false,
+    slideNumber: true,
     // Push each slide change to the browser history
     history: true,
     // Enable keyboard shortcuts for navigation
@@ -488,29 +614,7 @@ Y ordenamos el resultado por
         return !document.body.classList;
       }
     }, {
-      src: '../reveal/plugin/markdown/marked.js',
-      condition: function() {
-        return !!document.querySelector('[data-markdown]');
-      }
-    }, {
-      src: '../reveal/plugin/markdown/markdown.js',
-      condition: function() {
-        return !!document.querySelector('[data-markdown]');
-      }
-    }, {
-      src: '../reveal/plugin/highlight/highlight.js',
-      async: true,
-      callback: function() {
-        hljs.initHighlightingOnLoad();
-      }
-    }, {
       src: '../reveal/plugin/zoom-js/zoom.js',
-      async: true,
-      condition: function() {
-        return !!document.body.classList;
-      }
-    }, {
-      src: '../reveal/plugin/notes/notes.js',
       async: true,
       condition: function() {
         return !!document.body.classList;
